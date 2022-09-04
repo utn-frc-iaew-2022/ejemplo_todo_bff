@@ -28,7 +28,7 @@ public class TodoBFFController : ControllerBase
         var requestAuth0 = new RestRequest("/oauth/token", Method.Post);
         requestAuth0.AddHeader("content-type", "application/json");
         requestAuth0.AddHeader("cache-control", "no-cache");
-        requestAuth0.AddParameter("application/json", "{\"client_id\":\"1L0oJ7XzqlA8ENHt7cfeAucsJsJJITQe\",\"client_secret\":\"sVYn0LRFJdcRRsS5wy1T6Ba7Cm5ZQCM2fnlYD9PudkxaYEGHLr_-9UmRNiAHtd8s\",\"audience\":\"https://api.example.com\",\"grant_type\":\"client_credentials\"}", ParameterType.RequestBody);
+        requestAuth0.AddParameter("application/json", "{\"client_id\":\"****\",\"client_secret\":\"***\",\"audience\":\"https://api.example.com\",\"grant_type\":\"client_credentials\"}", ParameterType.RequestBody);
         var responseAuth0 = clientAuth0.Execute(requestAuth0);
 
         dynamic respAuth0 = JObject.Parse(responseAuth0.Content);
